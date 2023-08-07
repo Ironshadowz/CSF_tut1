@@ -1,0 +1,20 @@
+<p>cart works!</p>
+<table>
+  <th>
+    <tr>
+      <td>Cart Items</td>
+    </tr>
+  </th>
+  <tbody>
+    <tr *ngFor="let cart of cartItem">
+      <td>
+        <img [src]="cart.image" width="100" height="70">
+      </td>
+      <td>{{cart.name}}</td>
+      <td>{{cart.quantity}}</td>
+      <td>
+        <button (click)="remove(cart)">Remove</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
